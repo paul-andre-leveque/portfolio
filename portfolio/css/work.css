@@ -1,0 +1,132 @@
+*{box-sizing: border-box}
+.work{
+  background-color: #D91A32;
+  /*text-align: center;*/
+  border: 10px solid black;
+  border-top: 5px solid black;
+  border-bottom: 5px solid black;
+  
+}
+
+.grid-work {
+    margin-left: 3.9%;
+    display: block;
+  }
+  
+  /* clearfix */
+  .grid-work:after {
+    content: '';
+    display: block;
+    clear: both;
+    
+  }
+  
+  /* ---- grid-projet ---- */
+ 
+  .grid-projet {
+    
+    margin: 0.2px;
+    width: 160px;
+    height: 120px;
+    background: black;
+    border-radius: 5px;
+    overflow:hidden;
+    -webkit-box-shadow: 0px 0px 20px 6px rgba(0,0,0,0.7);
+    -moz-box-shadow: 0px 0px 20px 6px rgba(0,0,0,0.7);
+    box-shadow: 0px 0px 20px 6px rgba(0,0,0,0.7);
+    z-index: 2;
+  }
+  
+  .grid-projet--width2 { width: 320px; }
+  .grid-projet--width3 { width: 480px; }
+  .grid-projet--width4 { width: 640px; }
+  
+  .grid-projet--height2 { height: 200px; }
+  .grid-projet--height3 { height: 260px; }
+  .grid-projet--height4 { height: 360px; }
+  
+  
+  .grid-projet--gigante {
+    width: 320px;
+    height: 360px; 
+  }
+  .h3-cont{
+    z-index: 2;
+  }
+  .img-work1{}
+
+  .article-image-filtre{
+    background-color:black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:absolute; /* static de base / relative / absolute / fixed */
+    left:0;
+    top: 100%;
+    width:100%;
+    height:20%;
+    z-index:1;
+    opacity:0;
+    transition:top .5s,opacity .5S;
+  }
+  .work-link{
+    text-decoration: none;
+    font-size: 1.9rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    color: #D91A32;
+  }
+  .work-link:hover{
+    color: aliceblue;
+  }
+  .grid-projet--gigante:hover .article-image-filtre{
+    top:70%;
+    opacity:1;
+  }
+  /*.h3-title{
+    color: aliceblue;
+    font-size: 2em;
+    font-weight: 400;
+    }*/
+  .grid-projet:hover {
+    /*background:;*/
+    border:2px solid black;
+    cursor: pointer;
+  }
+
+  @media only screen and (min-width: 300px) and (max-width: 480px) {
+    .grid-work{
+      margin-left: 3%;
+      
+    }
+    .grid-projet--gigante{
+      width: auto;
+      margin-top: 5px;
+    }
+    .grid-projet--width2 { 
+      width: auto; }
+    .grid-projet--width3 { 
+      width: auto;
+    }
+    
+    .grid-projet{
+      -webkit-tap-highlight-color: transparent;
+      margin-left: 0;
+    }
+  }
+  @media only screen and (min-height: 350px) and (max-height: 570px) {
+    .grid-work{
+      margin-left: 0%;
+    }
+    .grid-projet--gigante{
+      width: 100%;
+      margin-top: 5px;
+      
+    }
+    .grid-projet--width2 { 
+      width: 100%; }
+    .grid-projet--width3 { 
+      width: 100%;
+    }
+    
+  }
